@@ -12,7 +12,6 @@ class PostAndComments extends React.Component {
   }
 
   componentWillMount() {
-    console.log(this.props);
     //If the posts contain the right post.
     if (this.props.slugs[this.props.match.params.slug]) {
       this.props.receivePost(this.props.posts[this.props.slugs[this.props.match.params.slug]]);
@@ -25,6 +24,13 @@ class PostAndComments extends React.Component {
     //get the comments for it.
     //else search from the slug and select the right one. Else
     //put that it's not here.
+  }
+
+  componentWillReceiveProps(newProps) {
+    console.log(this.props);
+    if( newProps.match.params.slug !== this.props.match.params.slug ) {
+        this.props.requestSearchedPosts(newProps.match.params.slug);
+    }
   }
 
   render() {
