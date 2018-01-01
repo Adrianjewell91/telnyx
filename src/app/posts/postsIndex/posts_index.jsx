@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {PostShowComponent} from '../postShow/post_show_component';
+import { Link } from 'react-router-dom';
 
 class PostsIndex extends React.Component {
   constructor (props) {
@@ -19,7 +20,10 @@ class PostsIndex extends React.Component {
         <ul>
           {
             this.props.publish_dates.map((el) => {
-              return <li key={this.props.posts[el[0]].id}><PostShowComponent post={this.props.posts[el[0]]}/></li>
+              return <li key={this.props.posts[el[0]].id}>
+                        <Link to={`/posts/${this.props.posts[el[0]].slug}`} className='nav-link'>View</Link>
+                        <PostShowComponent post={this.props.posts[el[0]]}/>
+                      </li>
             })
           }
         </ul>
