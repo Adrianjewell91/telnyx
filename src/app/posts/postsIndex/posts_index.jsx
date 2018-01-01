@@ -21,8 +21,10 @@ class PostsIndex extends React.Component {
           {
             this.props.publish_dates.map((el) => {
               return <li key={this.props.posts[el[0]].id}>
-                        <Link to={`/posts/${this.props.posts[el[0]].slug}`} className='nav-link'>View</Link>
-                        <PostShowComponent post={this.props.posts[el[0]]}/>
+                        <Link to={`/posts/${this.props.posts[el[0]].slug}`}
+                              className='nav-link'>
+                          <PostShowComponent post={this.props.posts[el[0]]}/>
+                        </Link>
                       </li>
             })
           }
