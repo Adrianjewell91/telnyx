@@ -9,6 +9,7 @@ import Navigation from './Navigation';
 import HomeComponent from './home/Home';
 import AboutComponent from './about/About';
 import PostsIndexContainer from './posts/postsIndex/posts_index_container';
+import PostAndCommentsContainer from './comments/postandCommentsShow/post_and_comments_container';
 
 const App = () => (
   <div>
@@ -17,6 +18,7 @@ const App = () => (
       <Switch>
         <Route path="/home" component={HomeComponent}/>
         <Route path="/about" component={AboutComponent}/>
+        <Route path="/posts/:slug" component={PostAndCommentsContainer}/>
         <Route path="/posts" component={PostsIndexContainer}/>
         <Route path="/" component={HomeComponent}/>
       </Switch>
