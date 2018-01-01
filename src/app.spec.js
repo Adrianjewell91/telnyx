@@ -12,7 +12,6 @@ import App from './app/App';
 
 describe('App test suite', function() {
   let component;
-  //this isn't working right now with the react router 4, so I'll leave it off for right now.
   beforeEach(function() {
     component = ReactTestUtils.renderIntoDocument(<Router history={browserHistory}>< App /></Router>);
   });
