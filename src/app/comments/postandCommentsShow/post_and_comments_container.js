@@ -6,7 +6,8 @@ import {receivePost,
         requestPost} from '../../../actions/posts_actions';
 
 const mapStateToProps = (state) => ({
-  posts: state.entities.posts
+  posts: state.entities.posts.formattedPosts,
+  slugs: state.entities.posts.slugs
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -11,7 +11,8 @@ export const postsReducer = (state = {formattedPosts: {}, slugs: {}}, action) =>
       action.posts.forEach((el) => slugs[el.slug] = el.id);
       return {formattedPosts, slugs};
     case RECEIVE_POST:
-      return {[action.post.publish_date]: action.post};
+      return {formattedPosts: {[action.post.id]: action.post},
+              slugs: {[action.post.slug]: action.post.id}};
       // slugs: {[action.post.slug]: action.post.id}}
     default:
       return state;

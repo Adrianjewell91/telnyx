@@ -12,16 +12,20 @@ class PostAndComments extends React.Component {
   componentWillMount() {
     console.log(this.props);
     //If the posts contain the right post.
-    if (this.props.posts[this.props.match.params.slug]) {
-      receivePost(this.props.posts[this.props.match.params.slug]);
-     } else {
-      console.log("this post doesn't exist");
+    if (this.props.slugs[this.props.match.params.slug]) {
+      this.props.receivePost(this.props.posts[this.props.slugs[this.props.match.params.slug]]);
+    } else {
+      console.log('searching');
+      //if the search results don't return it, then it doesn't exist.
+      this.props.requestSearchedPosts(this.props.match.params.slug);
     }
     //if so, then pass an action creator with that specific one, and then
     //get the comments for it.
     //else search from the slug and select the right one. Else
     //put that it's not here.
   }
+
+
 
   render() {
     return (
