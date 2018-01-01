@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import {PostShowComponent} from './post_show_component';
+
 class PostsIndex extends React.Component {
   constructor (props) {
     super(props);
@@ -10,10 +12,6 @@ class PostsIndex extends React.Component {
     this.props.requestPosts();
   }
 
-  componentDidMount() {
-    console.log(this.props);
-  }
-
   render() {
     return (
       <div className="posts-index-div">
@@ -21,7 +19,7 @@ class PostsIndex extends React.Component {
         <ul>
           {
             this.props.publish_dates.map((el) => {
-              return <li>{el} : {this.props.posts[el].content}</li>
+              return <PostShowComponent post={this.props.posts[el]}/>
             })
           }
         </ul>
@@ -31,7 +29,7 @@ class PostsIndex extends React.Component {
 }
 
 PostsIndex.propTypes = {
-  posts: PropTypes.array,
+  posts: PropTypes.objects,
   publish_dates: PropTypes.array
 }
 
