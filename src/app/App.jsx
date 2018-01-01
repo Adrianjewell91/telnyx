@@ -14,8 +14,11 @@ const App = () => (
   <div>
     <Navigation/>
     <div className='mx-3'>
-      <Route exact path="/home" component={HomeComponent}/>
-      <Route exact path="/about" component={AboutComponent}/>
+      <Switch>
+        <Route path="/home" component={HomeComponent}/>
+        <Route path="/about" component={AboutComponent}/>
+        <Route paht="/" component={HomeComponent}/>
+      </Switch>
     </div>
   </div>
 );
