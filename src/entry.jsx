@@ -8,19 +8,17 @@
  import Root from "./app/root";
 
 import * as PostActions from "./actions/posts_actions";
+import * as CommentsActions from "./actions/comments_actions";
 
  document.addEventListener("DOMContentLoaded", () => {
 
    let store;
-   // if (window.currentUser) {
-   //   const preLoadedState = {session: {currentUser: window.currentUser}};
-   //   store = configureStore(preLoadedState);
-   //   delete window.currentUser;
-   // } else {
    store = configureStore();
-   // }
+
    window.store = store;
    window.PostActions = PostActions;
+   window.CommentsActions = CommentsActions;
+
    const root = document.getElementById("root");
    ReactDOM.render(<Root store={store}/>, root);
  });

@@ -20,10 +20,6 @@ class PostAndComments extends React.Component {
       //if the search results don't return it, then it doesn't exist.
       this.props.requestSearchedPosts(this.props.match.params.slug);
     }
-    //if so, then pass an action creator with that specific one, and then
-    //get the comments for it.
-    //else search from the slug and select the right one. Else
-    //put that it's not here.
   }
 
   componentWillReceiveProps(newProps) {
