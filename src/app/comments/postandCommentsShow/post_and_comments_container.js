@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
 import PostAndComments from './post_and_comments';
 
-import {requestPost} from '../../../actions/posts_actions';
-import {requestSearchedPosts} from '../../../actions/posts_actions';
+import {receivePost,
+        requestSearchedPosts,
+        requestPost} from '../../../actions/posts_actions';
 
 const mapStateToProps = (state) => ({
-  post: state.entities.posts[0]
+  posts: state.entities.posts
 });
 
 const mapDispatchToProps = (dispatch) => ({
   requestPost: (id) => dispatch(requestPost(id)),
-  requestSearchedPosts: (query) => dispatch(requestSearchedPosts(query))
+  requestSearchedPosts: (query) => dispatch(requestSearchedPosts(query)),
+  receivePost: (post) => dispatch(receivePost(post))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostAndComments);

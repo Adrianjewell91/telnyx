@@ -19,7 +19,7 @@ class PostsIndex extends React.Component {
         <ul>
           {
             this.props.publish_dates.map((el) => {
-              return <PostShowComponent key={this.props.posts[el].id} post={this.props.posts[el]}/>
+              return <PostShowComponent key={this.props.posts[el[0]].id} post={this.props.posts[el[0]]}/>
             })
           }
         </ul>
