@@ -6,14 +6,14 @@
 
 import React from 'react';
 import ReactTestUtils from 'react-dom/test-utils';
-import {Router, browserHistory} from 'react-router';
+import {BrowserRouter} from 'react-router-dom';
 
 import App from './app/App';
 
 describe('App test suite', function() {
   let component;
   beforeEach(function() {
-    component = ReactTestUtils.renderIntoDocument(<Router history={browserHistory}>< App /></Router>);
+    component = ReactTestUtils.renderIntoDocument(<BrowserRouter>< App /></BrowserRouter>);
   });
 
   it('contains spec that returns true', function() {
