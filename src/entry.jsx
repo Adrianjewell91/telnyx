@@ -1,7 +1,7 @@
 /**
  * @overview Application entry point.
  */
- import 'src/app.scss';
+ import 'src/entry.scss';
  import React from 'react';
  import ReactDOM from 'react-dom';
  import configureStore from "./store/store";

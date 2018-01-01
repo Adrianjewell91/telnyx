@@ -14,7 +14,7 @@ const OUTPUT_PATH = 'dist';
 
 const config = {
   // Main entry point for application:
-  entry: './src/app.jsx',
+  entry: './src/entry.jsx',
 
   output: {
     path: path.resolve(__dirname, OUTPUT_PATH),
@@ -61,7 +61,7 @@ const config = {
 
       // app.scss will be injected into index.html as a `<style>` tag.
       {
-        test: /app\.scss$/,
+        test: /entry\.scss$/,
         use: [
           {
             loader: 'style-loader'
@@ -85,7 +85,7 @@ const config = {
       // to component definitions.
       {
         test: /\.scss$/,
-        exclude: /app\.scss$/,
+        exclude: /entry\.scss$/,
         use: [
           {
             loader: 'raw-loader'
