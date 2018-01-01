@@ -7,7 +7,7 @@ export const receiveComments = (comments) => (
 );
 
 export const receiveComment = (comment) => (
-  {type: RECEIVE_COMMENT, comments}
+  {type: RECEIVE_COMMENT, comment}
 );
 
 //util
@@ -41,3 +41,10 @@ export const postComment = (data, callback) => {
 }
 
 //thunks
+export const requestComments = (postId) => (dispatch) => {
+  return getComments(postId,(res) => dispatch(receiveComments(res)));
+}
+
+export const createComment = (data) => (dispatch) => {
+  return postComment(data,(res) => dispatch(receiveComment(res)));
+}

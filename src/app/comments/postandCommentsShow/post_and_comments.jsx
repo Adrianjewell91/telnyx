@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 
 //I want to put the post, then the comments, and then the add-Comment-button.
 import {PostShowComponent} from "../../posts/postShow/post_show_component";
-import CommentsIndex from "../commentsIndex/comments_index";
+import CommentsIndexContainer from "../commentsIndex/comments_index_container";
 import AddComment from "../addComment/add_comment";
+
+
 
 class PostAndComments extends React.Component {
   constructor (props) {
@@ -16,14 +18,14 @@ class PostAndComments extends React.Component {
     if (this.props.slugs[this.props.match.params.slug]) {
       this.props.receivePost(this.props.posts[this.props.slugs[this.props.match.params.slug]]);
     } else {
-      console.log('searching');
+      // console.log('searching');
       //if the search results don't return it, then it doesn't exist.
       this.props.requestSearchedPosts(this.props.match.params.slug);
     }
   }
 
   componentWillReceiveProps(newProps) {
-    console.log(this.props);
+    // console.log(this.props);
     if( newProps.match.params.slug !== this.props.match.params.slug ) {
         this.props.requestSearchedPosts(newProps.match.params.slug);
     }
@@ -35,7 +37,7 @@ class PostAndComments extends React.Component {
 
     //only render comment functions if the post[id] !== undefined.
     const commentFeatures = (post.id !== undefined) ? <div>
-                                                        <CommentsIndex/>
+                                                        <CommentsIndexContainer/>
                                                         <AddComment/>
                                                       </div> : <div></div>
     return (

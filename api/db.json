@@ -150,13 +150,9 @@
     },
     {
       "postId": "10",
-      "id": 8
-    },
-    {
-      "postId": "10",
       "parent_id": null,
       "user": "AdrianTEST",
-      "date": "2016-02-24",
+      "date": "2018-01-01",
       "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
       "id": 9
     }

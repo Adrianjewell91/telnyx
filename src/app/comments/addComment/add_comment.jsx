@@ -10,6 +10,9 @@ class AddComment extends React.Component {
 
   render() {
 
+    //  let date = new Date();
+    // let postDate = date.toISOString().slice(0,10);
+
     return (
       <div className="add-comment-div">
         <h3>Add Comment</h3>
