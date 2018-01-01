@@ -23,10 +23,10 @@ describe('PostShowComponent', function() {
     component = renderer.getRenderOutput();
   });
 
-  it('is a list element', function() {
+  it('is a div element', function() {
     //expect all things to be rendered.
     //expect it to be a list element.
-    expect(component.type).toBe('li');
+    expect(component.type).toBe('div');
   });
 
   it('shows all of the information(have two children elements)', function() {
