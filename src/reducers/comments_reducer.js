@@ -16,7 +16,8 @@ export const commentsReducer = (state = {}, action) => {
       action.comments.forEach((el) => commentsById[el.id] = el);
       return commentsById
     case RECEIVE_COMMENT:
-      return Object.merge(state, {[action.comment.id]: action.comment});
+    debugger
+      return Object.assign(state, {[action.comment.id]: action.comment});
     default:
       return state;
   }

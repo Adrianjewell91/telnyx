@@ -30,7 +30,7 @@ export const postComment = (data, callback) => {
   xhr.open('POST', `http://localhost:9001/posts/${data.postId}/comments/`);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onload = function() {
-      if (xhr.status === 200) {
+      if (xhr.status === 201) {
           callback(JSON.parse(xhr.responseText));
       }
       else {
