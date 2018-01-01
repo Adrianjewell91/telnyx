@@ -8,8 +8,7 @@ import {Route, Switch} from 'react-router-dom';
 import Navigation from './Navigation';
 import HomeComponent from './home/Home';
 import AboutComponent from './about/About';
-import PostsIndexContainer from './posts/posts_index_container';
-
+import PostsIndexContainer from './posts/postsIndex/posts_index_container';
 
 const App = () => (
   <div>
