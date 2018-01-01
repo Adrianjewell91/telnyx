@@ -8,11 +8,19 @@
 // Manifest
 @import "scss/base";
 
-li {
-  list-style: none;
-}
+// li {
+//   list-style: none;
+// }
 
 li:hover {
   border-left: 1px solid black;
   border-right: 1px solid black;
+}
+
+.post-index-content {
+  font-style: italic;
+}
+
+.author-span {
+  font-weight: bold;
 }
