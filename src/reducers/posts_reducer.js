@@ -4,11 +4,13 @@ import {RECEIVE_POST} from '../actions/posts_actions';
 export const postsReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_POSTS:
-      let slugs = {};
-      action.posts.forEach((el) => slugs[el.slug] = el['id']);
-      return {posts: action.posts, slugs: slugs};
+      //sort them by date here.
+      let formattedPosts = {};
+      action.posts.forEach((el) => formattedPosts[el.publish_date] = el);
+      return formattedPosts;
     case RECEIVE_POST:
-      return {posts: action.post, slugs: {[action.post.slug]: action.post.id}}
+      return {[action.post.publish_date]: action.post};
+      // slugs: {[action.post.slug]: action.post.id}}
     default:
       return state;
   }

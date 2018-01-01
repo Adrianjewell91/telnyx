@@ -8,6 +8,7 @@ import {Route, Switch} from 'react-router-dom';
 import Navigation from './Navigation';
 import HomeComponent from './home/Home';
 import AboutComponent from './about/About';
+import PostsIndexContainer from './posts/posts_index_container';
 
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
       <Switch>
         <Route path="/home" component={HomeComponent}/>
         <Route path="/about" component={AboutComponent}/>
+        <Route path="/posts" component={PostsIndexContainer}/>
         <Route path="/" component={HomeComponent}/>
       </Switch>
     </div>
