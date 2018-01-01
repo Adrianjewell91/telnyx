@@ -38,7 +38,6 @@ class PostAndComments extends React.Component {
     //only render comment functions if the post[id] !== undefined.
     const commentFeatures = (post.id !== undefined) ? <div>
                                                         <CommentsIndexContainer/>
-                                                        <AddComment/>
                                                       </div> : <div></div>
     return (
       <div className="post-show-div">

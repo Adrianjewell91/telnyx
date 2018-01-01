@@ -187,6 +187,22 @@
       "date": "2018-01-01",
       "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
       "id": 13
+    },
+    {
+      "postId": "9",
+      "parent_id": null,
+      "user": "AdrianTEST1",
+      "date": "2018-01-01",
+      "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
+      "id": 14
+    },
+    {
+      "postId": "9",
+      "parent_id": 14,
+      "user": "AdrianTEST1",
+      "date": "2018-01-01",
+      "content": "This is a reply to the previous post, id 14",
+      "id": 15
     }
   ]
 }

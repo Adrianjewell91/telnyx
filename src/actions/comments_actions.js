@@ -12,7 +12,7 @@ export const receiveComment = (comment) => (
 
 //util
 export const getComments = (postId,callback) => {
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open('GET', `http://localhost:9001/posts/${postId}/comments/`);
   xhr.onload = function() {
       if (xhr.status === 200) {
@@ -26,7 +26,7 @@ export const getComments = (postId,callback) => {
 }
 
 export const postComment = (data, callback) => {
-  var xhr = new XMLHttpRequest();
+  let xhr = new XMLHttpRequest();
   xhr.open('POST', `http://localhost:9001/posts/${data.postId}/comments/`);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.onload = function() {

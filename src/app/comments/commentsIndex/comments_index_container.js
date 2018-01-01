@@ -5,12 +5,10 @@ import CommentsIndex from './comments_index';
 import {requestComments} from '../../../actions/comments_actions';
 import {withRouter} from 'react-router-dom';
 
-function nestAndSortComments(comments) {
-  return comments;
-}
+import {nestComments} from '../../../selectors/nest_comments';
 
 const mapStateToProps = (state) => ({
-  comments: nestAndSortComments(state.entities.comments),
+  comments: nestComments(state.entities.comments, "id", "parent_id"),
   slugs: state.entities.posts.slugs
 });
 
