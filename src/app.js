@@ -15,6 +15,8 @@ import App from './app/App';
 import About from './app/about';
 import Home from './app/home';
 
+
+//Change to the way I know how to do it. 
 render((
   <Router history={browserHistory}>
     <Route path='/' component={App}>
