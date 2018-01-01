@@ -6,14 +6,13 @@
 
 import React from 'react';
 import ReactTestUtils from 'react-dom/test-utils';
-import {Router, withRouter, browserHistory} from 'react-router';
+import {Router, browserHistory} from 'react-router';
 
 import App from './app/App';
 
 describe('App test suite', function() {
   let component;
   //this isn't working right now with the react router 4, so I'll leave it off for right now.
-  // let WrappedApp = withRouter(App);
   beforeEach(function() {
     component = ReactTestUtils.renderIntoDocument(<Router history={browserHistory}>< App /></Router>);
   });
