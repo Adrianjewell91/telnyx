@@ -3,15 +3,19 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Route, Switch} from 'react-router-dom';
 
 import Navigation from './Navigation';
+import HomeComponent from './home/Home';
+import AboutComponent from './about/About';
 
-const App = ({ children }) => (
+
+const App = () => (
   <div>
     <Navigation/>
-
     <div className='mx-3'>
-      {children}
+      <Route exact path="/home" component={HomeComponent}/>
+      <Route exact path="/about" component={AboutComponent}/>
     </div>
   </div>
 );
