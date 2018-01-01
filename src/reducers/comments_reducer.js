@@ -10,7 +10,10 @@ export const commentsReducer = (state = [], action) => {
       return action.comments
     case RECEIVE_COMMENT:
       // return Object.assign(state, {[action.comment.id]: action.comment});
-      return state + action.comment;
+      let newState = [];
+      state.forEach((el) => newState.push(el));
+      newState.push(action.comment);
+      return newState;
     default:
       return state;
   }

@@ -149,60 +149,44 @@
       "content": "Nunc facilisis nisi vitae dapibus sodales. Proin vitae nunc turpis."
     },
     {
-      "postId": "10",
+      "postId": "9",
       "parent_id": null,
-      "user": "AdrianTEST",
+      "user": "Adrian",
+      "content": "Latinum Aurablius",
       "date": "2018-01-01",
-      "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
+      "id": 8
+    },
+    {
+      "postId": "9",
+      "parent_id": null,
+      "user": "爱德华",
+      "content": "斗牛活动很好",
+      "date": "2018-01-01",
       "id": 9
     },
     {
-      "postId": "5",
-      "parent_id": null,
-      "user": "AdrianTEST1",
+      "postId": "9",
+      "parent_id": 9,
+      "user": "德国人",
+      "content": "我没有同意",
       "date": "2018-01-01",
-      "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
       "id": 10
     },
     {
-      "postId": "5",
-      "parent_id": null,
-      "user": "AdrianTEST1",
+      "postId": "9",
+      "parent_id": 8,
+      "user": "爱德华",
+      "content": "是什么意思",
       "date": "2018-01-01",
-      "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
       "id": 11
     },
     {
-      "postId": "5",
+      "postId": "9",
       "parent_id": null,
-      "user": "AdrianTEST1",
+      "user": "爱德华",
+      "content": "I don't speak Latin",
       "date": "2018-01-01",
-      "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
       "id": 12
-    },
-    {
-      "postId": "5",
-      "parent_id": null,
-      "user": "AdrianTEST1",
-      "date": "2018-01-01",
-      "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
-      "id": 13
-    },
-    {
-      "postId": "9",
-      "parent_id": null,
-      "user": "AdrianTEST1",
-      "date": "2018-01-01",
-      "content": "Mauris vitae sem in nisl pharetra dapibus in nec orci.",
-      "id": 14
-    },
-    {
-      "postId": "9",
-      "parent_id": 14,
-      "user": "AdrianTEST1",
-      "date": "2018-01-01",
-      "content": "This is a reply to the previous post, id 14",
-      "id": 15
     }
   ]
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 
 //I'm going to need to do some recusion here to present the comments.
+import AddCommentContainer from '../addComment/add_comment_container';
+// import AddComment from '../addComment/add_comment';
 
 export const CommentShowComponent = ({comment}) => {
 
@@ -11,8 +13,9 @@ export const CommentShowComponent = ({comment}) => {
           <span className="author-span">{comment.user}</span> on {comment.date}:
         </div>
         <br/>
-        <div className="comment-show-content">{comment.content}}</div>
+        <div className="comment-index-content">{comment.content}</div>
         <br/>
+        <AddCommentContainer postId={comment.postId} parentId={comment.id}/>
       </div>
     );
   } else {
@@ -23,7 +26,7 @@ export const CommentShowComponent = ({comment}) => {
           <span className="author-span">{comment.user}</span> on {comment.date}:
         </div>
         <br/>
-        <div className="comment-show-content">{comment.content}}</div>
+        <div className="comment-index-content">{comment.content}</div>
         <br/>
         <ul>
           {
@@ -32,6 +35,7 @@ export const CommentShowComponent = ({comment}) => {
             })
           }
         </ul>
+        <AddCommentContainer postId={comment.postId} parentId={comment.id}/>
       </div>
     );
   }

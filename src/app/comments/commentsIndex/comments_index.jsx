@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {CommentShowComponent} from './comment_show';
+import AddCommentContainer from '../addComment/add_comment_container';
 
 class CommentsIndex extends React.Component {
   constructor (props) {
@@ -22,6 +23,8 @@ class CommentsIndex extends React.Component {
     return (
       <div className="comments-index-div">
         <h3>Comments</h3>
+        <AddCommentContainer postId={this.props.slugs[this.props.match.params.slug]}
+                             parentId={null}/>
         <ul>
           {
             this.props.comments.map((comment) => {
