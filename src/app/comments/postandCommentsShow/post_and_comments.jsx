@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 //I want to put the post, then the comments, and then the add-Comment-button.
-import PostShowContainer from "../../posts/postShow/post_show_component";
+import {PostShowComponent} from "../../posts/postShow/post_show_component";
 
 class PostAndComments extends React.Component {
   constructor (props) {
@@ -25,12 +25,15 @@ class PostAndComments extends React.Component {
     //put that it's not here.
   }
 
-
-
   render() {
+    const post = this.props.posts[this.props.slugs[this.props.match.params.slug]]
+                  || {title: "", author: "", publish_date: "", content: "Sorry! This doesn't exist."};
+
+
     return (
       <div className="post-show-div">
         <h1>Post and Comments</h1>
+        <PostShowComponent post={post}/>
       </div>
     )
   }
@@ -39,5 +42,10 @@ class PostAndComments extends React.Component {
 PostAndComments.propTypes = {
   posts: PropTypes.object
 }
+
+// PostAndComments.defaultProps = {
+//   posts: {1:{content: "Loading"}}
+//   slugs: {test }
+// }
 
 export default PostAndComments;
