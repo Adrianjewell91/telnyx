@@ -12,23 +12,40 @@ export const receivePost = (post) => (
 
 
 //util
-export const getPosts = () => {
-  return $.ajax({method: "get",
-                 url: `/posts`,
-  });
+export const getPosts = (callback) => {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'http://localhost:9001/posts');
+  xhr.onload = function() {
+      if (xhr.status === 200) {
+          callback(JSON.parse(xhr.responseText));
+      }
+      else {
+          console.log(xhr.status);
+      }
+  };
+  xhr.send();
 }
 
-export const getPost = (id) => {
-  return $.ajax({method: "get",
-                 url: `/posts/${id}`,
-  });
+
+export const getPost = (id, callback ) => {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', `http://localhost:9001/posts/${id}`);
+  xhr.onload = function() {
+      if (xhr.status === 200) {
+          callback(JSON.parse(xhr.responseText));
+      }
+      else {
+          console.log(xhr.status);
+      }
+  };
+  xhr.send();
 }
 
 //thunks
 export const requestPosts = () => (dispatch) => {
-  return getPosts().then((res) => dispatch(receivePosts(res)));
+  return getPosts((res) => dispatch(receivePosts(res)));
 }
 
 export const requestPost = (id) => (dispatch) => {
-  return getPost(id).then((res) => dispatch(receivePost(res)));
+  return getPost(id , (res) => dispatch(receivePost(res)));
 }

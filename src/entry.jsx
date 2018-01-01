@@ -7,6 +7,8 @@
  import configureStore from "./store/store";
  import Root from "./app/root";
 
+import * as PostActions from "./actions/posts_actions";
+
  document.addEventListener("DOMContentLoaded", () => {
 
    let store;
@@ -18,6 +20,7 @@
    store = configureStore();
    // }
    window.store = store;
+   window.PostActions = PostActions;
    const root = document.getElementById("root");
    ReactDOM.render(<Root store={store}/>, root);
  });
