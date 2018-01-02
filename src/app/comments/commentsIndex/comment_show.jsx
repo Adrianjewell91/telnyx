@@ -8,7 +8,7 @@ export const CommentShowComponent = ({comment}) => {
   let singleComment = <div>
                         <div className="comment-index-item">
                           <div className="comment-show-author-info">
-                            <span className="comment-author-span">{comment.user}</span> on {comment.date}:
+                            <span className="comment-author-span">{comment.user}</span> said on {comment.date}:
                           </div>
                           <br/>
                           <div className="comment-index-content">{comment.content}</div>
