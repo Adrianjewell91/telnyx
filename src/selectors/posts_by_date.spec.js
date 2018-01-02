@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactTestUtils from 'react-dom/test-utils';
+// import React from 'react';
+// import ReactTestUtils from 'react-dom/test-utils';
 
 import {sortPostsByDate} from './posts_by_date';
 
@@ -39,7 +39,7 @@ describe('SortPostsByDateSelector', function() {
     result = sortPostsByDate(testPosts);
   });
 
-  it('sorts posts by date and retains linkage of date to id.', function() {
+  it('sorts date and links id to its the corresponding publish date.', function() {
     expect(result[0][0]).toBe('1');
     expect(result[1][0]).toBe('3');
     expect(result[2][0]).toBe('2');

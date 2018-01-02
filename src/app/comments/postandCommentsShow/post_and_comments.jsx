@@ -14,18 +14,15 @@ class PostAndComments extends React.Component {
   }
 
   componentWillMount() {
-    //If the posts contain the right post.
+
     if (this.props.slugs[this.props.match.params.slug]) {
       this.props.receivePost(this.props.posts[this.props.slugs[this.props.match.params.slug]]);
     } else {
-      // console.log('searching');
-      //if the search results don't return it, then it doesn't exist.
       this.props.requestSearchedPosts(this.props.match.params.slug);
     }
   }
 
   componentWillReceiveProps(newProps) {
-    // console.log(this.props);
     if( newProps.match.params.slug !== this.props.match.params.slug ) {
         this.props.requestSearchedPosts(newProps.match.params.slug);
     }

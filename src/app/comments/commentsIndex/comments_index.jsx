@@ -21,10 +21,10 @@ class CommentsIndex extends React.Component {
   render() {
     return (
       <div className="comments-wrapper">
-        <h3>Discussion:</h3>
         <AddCommentContainer postId={this.props.slugs[this.props.match.params.slug]}
           parentId={null} replyName="New Thread"/>
         <br/>
+        <h3>Current Threads:</h3>
         <div className="comments-index-div">
 
           <ul>

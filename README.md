@@ -19,21 +19,19 @@ If the app doesn't do it automatically, navigate to http://localhost:9000 and go
 
 ## Technical Features
 
-1. Redux for Unidirectional State Management.
+1. Redux for Management of Posts and Comment - state shape supports new Features.
 2. Blog Post URL Slugs - Direct Access to Blog Posts from Urls (ie. go directly to /posts/blog-post-1 in the address bar).
-3. Asynchronous HTTP Requests with Vanilla-JS.
+3. Asynchronous HTTP Requests with Vanilla-JS and Thunk middleware (for passing data into Redux store).
 4. Recursion and Topographical Sort for Handling Nested Comments from a Flat list (with assistance from user 'nu11ptr' on stack-overflow).
 5. Use of React refs for toggling Comment-Box.
 6. Update from React-Router v3 to React-Router-Dom v4.
-7. Simple Logic for preventing empty comments.
+7. Simple Logic for preventing empty comment submission.
 8. SCSS Compiling.
 9. Some Unit Tests.
-10. Provider, HashRouter, Containerization of Components to map state and dispatch to props. 
+10. Provider, HashRouter, Containerization of Components to map state and dispatch to props.
 
 ## Potential Further Implementations:
 
 1. Infinite Scrolling
 
 2. More Styling
-
-3. Full CRUD for Comments
