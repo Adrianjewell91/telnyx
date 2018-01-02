@@ -6,7 +6,7 @@ class AddComment extends React.Component {
     this.state = {postId: this.props.postId, parent_id: this.props.parentId,
                   user: "", content: "",
                   date: new Date().toISOString().slice(0,10)};
-                  
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.revealForm = this.revealForm.bind(this);
   }
@@ -21,6 +21,7 @@ class AddComment extends React.Component {
     }
 
     document.querySelectorAll('input').forEach((el) => el.value = "");
+    this.setState({user: "", content: ""});
   }
 
   update (field) {

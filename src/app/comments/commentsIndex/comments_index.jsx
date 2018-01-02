@@ -26,7 +26,6 @@ class CommentsIndex extends React.Component {
         <br/>
         <h3>Current Threads:</h3>
         <div className="comments-index-div">
-
           <ul>
             {
               this.props.comments.reverse().map((comment) => {

@@ -3,7 +3,7 @@
 ## How to Run
 
 1. In terminal, run
-`git clone https://github.com/Adrianjewell91/telnyx.git`
+`git clone https://github.com/Adrianjewell91/telnyx.git`. Remember to navigate into the directory before moving forward.
 
 2. Run `npm install` to install dependencies.
 

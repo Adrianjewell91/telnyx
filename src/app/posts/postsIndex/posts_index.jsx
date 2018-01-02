@@ -16,7 +16,7 @@ class PostsIndex extends React.Component {
   render() {
     return (
       <div className="posts-index-div">
-        <h1>All Posts: Sorted by Date from Newest to Oldest</h1>
+        <h1>All Posts: Sorted by Date from Newest to Oldest.</h1>
         <ul>
           {
             this.props.publish_dates.map((el) => {
