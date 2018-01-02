@@ -19,22 +19,24 @@ class CommentsIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     return (
-      <div className="comments-index-div">
+      <div className="comments-wrapper">
+        <h3>Discussion:</h3>
         <AddCommentContainer postId={this.props.slugs[this.props.match.params.slug]}
-                             parentId={null} replyName="New Thread"/>
+          parentId={null} replyName="New Thread"/>
+        <br/>
+        <div className="comments-index-div">
 
-                           <h3>Current Threads:</h3>
-        <ul>
-          {
-            this.props.comments.map((comment) => {
-              return <li key={`commentId${comment.id}`}>
-                      <CommentShowComponent comment={comment}/>
-                     </li>
-            })
-          }
-        </ul>
+          <ul>
+            {
+              this.props.comments.map((comment) => {
+                return <li key={`commentId${comment.id}`}>
+                        <CommentShowComponent comment={comment}/>
+                       </li>
+              })
+            }
+          </ul>
+        </div>
       </div>
     )
   }
