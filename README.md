@@ -15,7 +15,7 @@ If the app doesn't do it automatically, navigate to http://localhost:9000 and go
 
 1. Blog feed, sorted by date from newest to oldest.
 
-2. Nested comments and reply functionality at any level of depth.
+2. Nested comments and 'reply' functionality at any level of depth.
 
 ## Technical Features
 
@@ -28,7 +28,7 @@ If the app doesn't do it automatically, navigate to http://localhost:9000 and go
 7. Simple Logic for preventing empty comment submission.
 8. SCSS Compiling.
 9. Some Unit Tests.
-10. Provider, HashRouter, Containerization of Components to map state and dispatch to props.
+10. Provider, HashRouter, containerization of components to map state and dispatch to props.
 
 ## Potential Further Implementations:
 
