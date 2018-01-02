@@ -28,7 +28,6 @@ export const CommentShowComponent = ({comment}) => {
       </div>
     );
   } else {
-    //build the component, then return the whole thing.
     return (
       <div>
           {singleComment}

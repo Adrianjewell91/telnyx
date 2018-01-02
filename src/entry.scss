@@ -8,23 +8,23 @@
 // Manifest
 @import "scss/base";
 
-// li {
-//   list-style: none;
-// }
-// a {
-//   color:black;
-// }
-button:focus {
-    outline: 0;
+li {
+  list-style: none;
 }
 
-.post-li:hover {
+button:focus {
+  outline: 0;
+}
+
+.post-li, .comment-index-item {
+  border: 1px solid black;
+  margin: 1%;
+}
+
+.post-li:hover, .comment-index-item:hover {
   // border-left: 1px solid black;
   border: 1px solid black;
-}
-
-.comment-index-item:hover {
-  border: 1px solid black;
+  box-shadow: 5px 10px 18px #888888;
 }
 
 .post-index-content, .comment-index-content {

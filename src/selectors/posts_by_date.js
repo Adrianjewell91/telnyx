@@ -18,5 +18,5 @@ export const sortPostsByDate = (posts) => {
 });
   // console.log(array);
 
-  return array;
+  return array.reverse();
 }

@@ -40,8 +40,8 @@ describe('SortPostsByDateSelector', function() {
   });
 
   it('sorts posts by date and retains linkage of date to id.', function() {
-    expect(result[0][0]).toBe('2');
-    expect(result[1][0]).toBe('3');
     expect(result[2][0]).toBe('1');
+    expect(result[1][0]).toBe('3');
+    expect(result[0][0]).toBe('2');
   });
 });
