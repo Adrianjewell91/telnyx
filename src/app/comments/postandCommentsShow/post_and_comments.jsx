@@ -33,7 +33,9 @@ class PostAndComments extends React.Component {
 
   render() {
     const post = this.props.posts[this.props.slugs[this.props.match.params.slug]]
-                  || {slug: "", title: "", author: "", publish_date: "", content: "Sorry! This doesn't exist."};
+                  || {slug: "", title: "",
+                      author: "", publish_date: "",
+                      content: "Sorry! This doesn't exist."};
 
     //only render comment functions if the post[id] !== undefined.
     const commentFeatures = (post.id !== undefined) ? <div>
@@ -41,7 +43,7 @@ class PostAndComments extends React.Component {
                                                       </div> : <div></div>
     return (
       <div className="post-show-div">
-        <h1>Post and Comments</h1>
+        <h1>{post.title} by <span className="author-span">{post.author}</span></h1>
         <PostShowComponent post={post}/>
         {commentFeatures}
       </div>
