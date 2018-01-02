@@ -27,7 +27,7 @@ If the app doesn't do it automatically, navigate to http://localhost:9000 in the
 6. Update from React-Router v3 to React-Router-Dom v4.
 7. Simple Logic for preventing empty comment submission.
 8. SCSS Compiling.
-9. Some Unit Tests.
+9. Unit Test a Component, a Reducer, and a Selector.
 10. Provider, HashRouter, containerization of components to map state and dispatch to props.
 
 ## Potential Further Implementations:
