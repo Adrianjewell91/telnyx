@@ -34,8 +34,8 @@ If the app doesn't do it automatically, navigate to http://localhost:9000 in the
 
 ## Potential Further Implementations:
 
-1. Infinite Scrolling
+1. Infinite Scrolling.
 
 2. Guarantee Sorting of Comments (right now only guaranteed by database entry order).
 
-3. More Styling
+3. More Styling.
