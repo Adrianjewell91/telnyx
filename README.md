@@ -20,7 +20,7 @@ If the app doesn't do it automatically, navigate to http://localhost:9000 in the
 ## Technical Features
 
 1. Redux for Management of Posts and Comment - state shape supports new Features.
-2. Blog Post URL Slugs - Direct Access to Blog Posts from Urls (ie. go directly to /posts/blog-post-1 in the address bar).
+2. URL Slugs - Direct access to blog posts from Urls (ie. go directly to /posts/blog-post-1 in the address bar).
 3. Asynchronous HTTP Requests with Vanilla-JS and Thunk middleware (for passing data into Redux store).
 4. Recursion and Topographical Sort for Handling Nested Comments from a Flat list (with assistance from user 'nu11ptr' on stack-overflow).
 5. Use of React refs for toggling Comment-Box.
