@@ -28,6 +28,8 @@ export const CommentShowComponent = ({comment}) => {
         <br/>
         <div className="comment-index-content">{comment.content}</div>
         <br/>
+        <AddCommentContainer postId={comment.postId} parentId={comment.id}/>
+        <br/>
         <ul>
           {
             comment.Children.map((child) => {
@@ -35,7 +37,6 @@ export const CommentShowComponent = ({comment}) => {
             })
           }
         </ul>
-        <AddCommentContainer postId={comment.postId} parentId={comment.id}/>
       </div>
     );
   }

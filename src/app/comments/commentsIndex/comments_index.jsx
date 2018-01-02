@@ -22,9 +22,11 @@ class CommentsIndex extends React.Component {
     console.log(this.props);
     return (
       <div className="comments-index-div">
-        <h3>Comments</h3>
+        <h3>Post a Comment</h3>
         <AddCommentContainer postId={this.props.slugs[this.props.match.params.slug]}
                              parentId={null}/>
+
+                           <h3>Previous Comments:</h3>
         <ul>
           {
             this.props.comments.map((comment) => {

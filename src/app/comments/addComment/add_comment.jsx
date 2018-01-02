@@ -13,6 +13,7 @@ class AddComment extends React.Component {
     e.preventDefault();
     console.log(this.state);
     this.props.createComment(this.state);
+    document.querySelectorAll('input').forEach((el) => el.value = "");
   }
 
   update (field) {
@@ -23,6 +24,8 @@ class AddComment extends React.Component {
   }
 
   render() {
+    //I want to render a button that when clicked shows the add comment form.
+    //When clicked again hides it.
     return (
       <div className="add-comment-div">
         <span>Add Comment: </span>
@@ -33,6 +36,7 @@ class AddComment extends React.Component {
           <input onChange={this.update("user")}></input>
         </label>
 
+        <br/>
         <button onClick={this.handleSubmit}>Add Comment</button>
         <br/>
         <br/>
