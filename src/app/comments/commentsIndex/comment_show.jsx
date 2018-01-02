@@ -8,39 +8,46 @@ export const CommentShowComponent = ({comment}) => {
 
   if (comment.Children.length === 0) {
     return (
-      <div className="comment-index-item">
-        <div className="comment-show-author-info">
-          <span className="author-span">{comment.user}</span> on {comment.date}:
+      <div>
+        <div className="comment-index-item">
+          <div className="comment-show-author-info">
+            <span className="author-span">{comment.user}</span> on {comment.date}:
+          </div>
+          <br/>
+          <div className="comment-index-content">{comment.content}</div>
         </div>
+          <br/>
+          <AddCommentContainer postId={comment.postId}
+                               parentId={comment.id}
+                               replyName="Reply"/>
         <br/>
-        <div className="comment-index-content">{comment.content}</div>
-        <br/>
-        <AddCommentContainer postId={comment.postId}
-                             parentId={comment.id}
-                             replyName="Reply"/>
       </div>
     );
   } else {
     //build the component, then return the whole thing.
     return (
-      <div className="comment-index-item">
-        <div className="comment-show-author-info">
-          <span className="author-span">{comment.user}</span> on {comment.date}:
+      <div>
+        <div className="comment-index-item">
+          <div className="comment-show-author-info">
+            <span className="author-span">{comment.user}</span> on {comment.date}:
+          </div>
+          <br/>
+          <div className="comment-index-content">
+            {comment.content}
+          </div>
         </div>
-        <br/>
-        <div className="comment-index-content">{comment.content}</div>
-        <br/>
-        <AddCommentContainer postId={comment.postId}
-                             parentId={comment.id}
-                             replyName="Reply"/>
-        <br/>
-        <ul>
-          {
-            comment.Children.map((child) => {
-              return <li key={`commentId${child.id}`}><CommentShowComponent comment={child}/></li>
-            })
-          }
-        </ul>
+          <br/>
+          <AddCommentContainer postId={comment.postId}
+                               parentId={comment.id}
+                               replyName="Reply"/>
+          <br/>
+          <ul>
+            {
+              comment.Children.map((child) => {
+                return <li key={`commentId${child.id}`}><CommentShowComponent comment={child}/></li>
+              })
+            }
+          </ul>
       </div>
     );
   }

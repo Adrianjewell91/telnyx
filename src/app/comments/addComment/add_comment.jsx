@@ -12,8 +12,13 @@ class AddComment extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state);
-    this.props.createComment(this.state);
+
+    if (this.state.user === "" || this.state.content === "") {
+      alert("You must provide user and content information");
+    } else {
+      this.props.createComment(this.state);
+    }
+
     document.querySelectorAll('input').forEach((el) => el.value = "");
   }
 
@@ -34,26 +39,31 @@ class AddComment extends React.Component {
     //When clicked again hides it.
     return (
       <div className="comment-reply-box">
+
         <button ref={(revealButton) => {this.revealButton = revealButton}}
                 onClick={this.revealForm}>
           {this.props.replyName}
         </button>
+
         <div className={`comment-reply-form hidden`}
              ref={(formBox) => {this.formBox = formBox}}>
 
           <br/>
           <span>Add Comment: </span>
-          <label>
-            <input onChange={this.update("content")}></input>
-          </label>
-          <label> User:
-            <input onChange={this.update("user")}></input>
-          </label>
+
+            <label>
+              <input onChange={this.update("content")}></input>
+            </label>
+            <label> User:
+              <input onChange={this.update("user")}></input>
+            </label>
+
           <br/>
           <button onClick={this.handleSubmit}>Add Comment</button>
-          <br/>
 
         </div>
+
+        <br/>
       </div>
     )
   }
