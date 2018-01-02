@@ -31,8 +31,8 @@ describe('PostShowComponent', function() {
 
   it('shows all of the information(have two children elements)', function() {
     //expect all things to be rendered.
-    //I want it have the two other divs inside of it.
-    console.log(component.props);
+    //I want it have the two other divs inside of it (plus the <br/>)
+    // console.log(component.props);
     expect(component.props.children.length).toBe(3);
   });
 });

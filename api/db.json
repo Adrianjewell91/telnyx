@@ -229,14 +229,6 @@
       "id": 17
     },
     {
-      "postId": "1",
-      "parent_id": null,
-      "user": "Oh yea",
-      "content": "New Comment",
-      "date": "2018-01-02",
-      "id": 18
-    },
-    {
       "postId": "5",
       "parent_id": null,
       "user": "爱德华",
@@ -267,6 +259,30 @@
       "content": "当老师让你对年轻人有影响",
       "date": "2018-01-02",
       "id": 22
+    },
+    {
+      "postId": "4",
+      "parent_id": null,
+      "user": "Adrian",
+      "content": "Test Comment",
+      "date": "2018-01-02",
+      "id": 23
+    },
+    {
+      "postId": "4",
+      "parent_id": null,
+      "user": "BDrian",
+      "content": "Another Newer Test",
+      "date": "2018-01-02",
+      "id": 24
+    },
+    {
+      "postId": "4",
+      "parent_id": 23,
+      "user": "爱德华",
+      "content": "Happy!",
+      "date": "2018-01-02",
+      "id": 25
     }
   ]
 }

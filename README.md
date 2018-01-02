@@ -9,8 +9,7 @@
 
 3. Run `npm start` (runs both the stubbed Restful server and the frontend.)
 
-If it doesn't do it automatically, navigate to http://localhost:9000 and go exploring.
-
+If the app doesn't do it automatically, navigate to http://localhost:9000 and go exploring.
 
 ## Features
 

@@ -29,7 +29,7 @@ class CommentsIndex extends React.Component {
 
           <ul>
             {
-              this.props.comments.map((comment) => {
+              this.props.comments.reverse().map((comment) => {
                 return <li key={`commentId${comment.id}`}>
                         <CommentShowComponent comment={comment}/>
                        </li>
