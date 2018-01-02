@@ -315,6 +315,14 @@
       "content": "New Thred",
       "date": "2018-01-02",
       "id": 30
+    },
+    {
+      "postId": "2",
+      "parent_id": 7,
+      "user": "Adrianus",
+      "content": "Latinus",
+      "date": "2018-01-02",
+      "id": 31
     }
   ]
 }
