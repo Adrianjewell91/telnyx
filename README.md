@@ -3,11 +3,13 @@
 ## How to Run
 
 1. In terminal, run
-`git clone https://github.com/Adrianjewell91/telnyx.git`. Remember to navigate into the directory before moving forward.
+`git clone https://github.com/Adrianjewell91/telnyx.git`. Remember to navigate into the directory before continuing with the instructions.
 
 2. Run `npm install` to install dependencies.
 
 3. Run `npm start` (runs both the stubbed Restful server and the frontend.)
+
+4. `npm test` to run the tests.
 
 If the app doesn't do it automatically, navigate to http://localhost:9000 in the browser.
 
