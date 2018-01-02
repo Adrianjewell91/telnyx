@@ -31,6 +31,7 @@ class CommentsIndex extends React.Component {
               this.props.comments.reverse().map((comment) => {
                 return <li key={`commentId${comment.id}`}>
                         <CommentShowComponent comment={comment}/>
+                        <hr/>
                        </li>
               })
             }
