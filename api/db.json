@@ -235,6 +235,14 @@
       "content": "New Comment",
       "date": "2018-01-02",
       "id": 18
+    },
+    {
+      "postId": "5",
+      "parent_id": null,
+      "user": "爱德华",
+      "content": "追求梦想的说话果然是奇怪",
+      "date": "2018-01-02",
+      "id": 19
     }
   ]
 }

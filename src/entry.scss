@@ -11,10 +11,16 @@
 // li {
 //   list-style: none;
 // }
+// a {
+//   color:black;
+// }
+button:focus {
+    outline: 0;
+}
 
 .post-li:hover {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  // border-left: 1px solid black;
+  border: 1px solid black;
 }
 
 .post-index-content, .comment-index-content {
@@ -23,4 +29,12 @@
 
 .author-span {
   font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.selected {
+  background-color: grey;
 }

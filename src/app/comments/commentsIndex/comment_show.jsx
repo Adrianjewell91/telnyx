@@ -15,7 +15,9 @@ export const CommentShowComponent = ({comment}) => {
         <br/>
         <div className="comment-index-content">{comment.content}</div>
         <br/>
-        <AddCommentContainer postId={comment.postId} parentId={comment.id}/>
+        <AddCommentContainer postId={comment.postId}
+                             parentId={comment.id}
+                             replyName="Reply"/>
       </div>
     );
   } else {
@@ -28,7 +30,9 @@ export const CommentShowComponent = ({comment}) => {
         <br/>
         <div className="comment-index-content">{comment.content}</div>
         <br/>
-        <AddCommentContainer postId={comment.postId} parentId={comment.id}/>
+        <AddCommentContainer postId={comment.postId}
+                             parentId={comment.id}
+                             replyName="Reply"/>
         <br/>
         <ul>
           {

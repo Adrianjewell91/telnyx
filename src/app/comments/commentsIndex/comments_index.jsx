@@ -24,7 +24,7 @@ class CommentsIndex extends React.Component {
       <div className="comments-index-div">
         <h3>Post a Comment</h3>
         <AddCommentContainer postId={this.props.slugs[this.props.match.params.slug]}
-                             parentId={null}/>
+                             parentId={null} replyName="New Thread"/>
 
                            <h3>Previous Comments:</h3>
         <ul>
