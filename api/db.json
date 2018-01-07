@@ -323,6 +323,22 @@
       "content": "Latinus",
       "date": "2018-01-02",
       "id": 31
+    },
+    {
+      "postId": "1",
+      "parent_id": 3,
+      "user": "Adrian",
+      "content": "dasdfasdf",
+      "date": "2018-01-05",
+      "id": 32
+    },
+    {
+      "postId": "1",
+      "parent_id": 4,
+      "user": "sdfsd",
+      "content": "asdfasdf",
+      "date": "2018-01-05",
+      "id": 33
     }
   ]
 }
